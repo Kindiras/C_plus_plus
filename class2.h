@@ -11,7 +11,7 @@ class IndiClass
 {
     public:
 //This is the constructor has the same name as the class.
-// It can neither retur or even void.         
+// It can neither return or even void.         
 	    IndiClass(string x, double y, double z, string col);
 	    void get_detal();
 	    string getName();
