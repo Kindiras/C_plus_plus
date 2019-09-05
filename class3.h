@@ -40,7 +40,7 @@ class IndiClass
     	height=z;
     	color=col;
     }
-    
+    //Defining the destructor, you can delete the memeroy allocation and other.
     IndiClass::~IndiClass()
     {
         cout<<"emptying variables"<<"\n";
