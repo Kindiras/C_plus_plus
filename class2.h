@@ -30,7 +30,8 @@ class IndiClass
 
 };
 
-//Constructor passing the default variables. 
+//Constructor passing the default variables.
+// or defining the constructor.
     IndiClass::IndiClass(string x, double y, double z, string col)
     {
     	name=x;
