@@ -1,5 +1,5 @@
 # C++ OOP:
-# As the beginner in the Object Oriented Programmer I have done some examples. 
+. As the beginner in the Object Oriented Programmer I have done some examples. 
 `Lesson 1`
    + Constructor is not made.
    + class1.cpp is a basic example of make class in the c++.
