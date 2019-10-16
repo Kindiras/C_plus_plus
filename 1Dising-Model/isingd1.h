@@ -52,7 +52,7 @@ using namespace std;
         
   };
 
-    IsingD1::IsingD1(int l, double t, double b) //Constructure in class. it gives the default values. 
+IsingD1::IsingD1(int l, double t, double b) //Constructure in class. it gives the default values. 
     {
     	L=l;
     	T=t;
@@ -67,7 +67,7 @@ using namespace std;
       susceptibility = new float [Max_temp+1];
       }
 
-   IsingD1::~IsingD1() //destructor (~ for destructor), it will empty to save memory. 
+IsingD1::~IsingD1() //destructor (~ for destructor), it will empty to save memory. 
    {
     delete [] lattice;
     delete [] Energy;
@@ -83,7 +83,7 @@ using namespace std;
 
 //Below are all the function define. 
    //we can change and reduce the functions to increase the computer computing capability. 
-     double IsingD1::mag_initial()
+double IsingD1::mag_initial()
      {
         int i;
         for(i=0;i<Max_temp;i++)
@@ -91,23 +91,23 @@ using namespace std;
         return 0;
       }
 
-      int IsingD1::initialization()
-      {
+int IsingD1::initialization()
+    {
       int i,j,k; 
       cout<<"..............initialization.................."<<"\n";
       count_ae=0;
       for(i=0;i<=L;i++)
-       {
+        {
 
-        lattice[i]=1; //initially all lattic1es are spin up.
+         lattice[i]=1; //initially all lattic1es are spin up.
 
         }
-        for (j=0;j<=warm;j++)
+       for (j=0;j<=warm;j++)
         {
           Energy[j]=0;Magnetization[j]=0;
         }
            return 0;
-       }
+    }
 
 
 double IsingD1::mcmove()
@@ -115,7 +115,7 @@ double IsingD1::mcmove()
   int t;
   mag_initial();
   for (t=0;t<Max_temp;t++)
-  {
+    {
     srand(time(NULL)); 
     //cout<<"hereeeroafajflafljafjalfjalfjalfjali"<<"\n";
    initialization();
@@ -127,10 +127,10 @@ double IsingD1::mcmove()
    susceptibility[t]=get_susceptibility();
    T=T+0.01;
    cout<<"Temperature: "<<T<<"\n";
-  }
-  save_data();
-return 0;
-}
+     }
+   save_data();
+  return 0;
+ }
 
 
 
@@ -146,12 +146,12 @@ int IsingD1::thermalization()
     Energy[i]=energy_spin();
     Magnetization[i]=magnetic_spin();
     count_ae=count_ae+1;
-  }
+    }
   }
   return 0;
 }
 
-   int IsingD1::check_neighbor(int l)
+int IsingD1::check_neighbor(int l)
     {
        int LN, RN;
        LN = l-1;
@@ -210,19 +210,17 @@ int IsingD1::accept_events(int n, int x)
 }
 
 double IsingD1::energy_spin()
-
 {
   int i, Esig=0;
   for (i=0;i<L-1;i++)
   {
-  Esig= Esig+lattice[i]*lattice[i+1];
+   Esig= Esig+lattice[i]*lattice[i+1];
   }
   Esig=Esig+lattice[L]*lattice[0];
   return Esig;
 }
 
 double IsingD1::magnetic_spin()
-
 {
   int i, Msig=0;
   for (i=0;i<=L;i++)
@@ -297,7 +295,7 @@ void IsingD1::save_data()
         fprintf(fpt, "%0.3f\t",Average_M[i]);
         fprintf(fpt, "%0.3f\t",Specific_capacity[i]);
         fprintf(fpt, "%0.3f\n",susceptibility[i]);
-      }
-  fclose(fpt);
-  }
+       }
+   fclose(fpt);
+   }
 }
