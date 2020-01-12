@@ -12,4 +12,4 @@
   + Use 'getVariableName' for accessing private variables Use 'setVariableName' for assigning values to private variables
   + You will need to signify that the functions are part of the class definition by using the namespace classname::.
   + For more clarification go to the other examples here in the [examples](https://github.com/Kindiras/C_plus_plus/tree/master/ClassExample)
-  + see the solution of above problem using class [solution](goodexampleclass.cpp).
+  + see the solution of above problem using class [solution](goodexampleclass.cpp) and this solution is modified and written in more professional way not copied the solution from the sources.
