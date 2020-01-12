@@ -7,3 +7,8 @@
 + student4: Name: Annie Blue, ID#10, Grad. Date: 2020
 + student5: Name: Jose Lemon, ID#25, Grad. Date: 2016
 ## `C++ Convention is:`
+  + Capitalize the first letter of the classname
+  + Private members are listed first. If you do this, there is no need to use the 'private' keyword. If you list them after the public keyword, you will need to identify them using the private keyword.
+  + Use 'getVariableName' for accessing private variables Use 'setVariableName' for assigning values to private variables
+  + You will need to signify that the functions are part of the class definition by using the namespace classname::.
+  + For more clarification go to the other examples here [examples]()
