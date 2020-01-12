@@ -22,6 +22,7 @@ class IndiClass
         string getcolor();
     
     private:
+    // if this private is define above the public then we don't have to write the key word `private`.
     //global variable in the private you can declare it in the public but not the professional way
     //since these are not required to change by the public
     //care muct be take while decideing the private and public in c++    	
